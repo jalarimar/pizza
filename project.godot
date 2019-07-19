@@ -19,6 +19,11 @@ config/name="Did I Hear Pizza"
 run/main_scene="res://Level 1.tscn"
 config/icon="res://icon.png"
 
+[display]
+
+window/size/width=800
+window/size/height=800
+
 [input]
 
 space={

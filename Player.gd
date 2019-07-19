@@ -1,4 +1,5 @@
 extends KinematicBody2D
+signal pizza
 
 var speak_range = 5
 var speed = 200
