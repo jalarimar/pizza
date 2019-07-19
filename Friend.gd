@@ -7,7 +7,7 @@ var hungryness = 1    # 1, 2, 3
 var coolness = 0      # -5, 1, 5, 20
 var is_aware = false
 var direction = Vector2.UP
-var speed = 100
+var speed = 200
 
 
 func _ready():

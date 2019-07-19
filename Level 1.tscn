@@ -20,6 +20,7 @@ scale = Vector2( 0.347749, 0.355566 )
 texture = ExtResource( 1 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 588.086, 322.895 )
 
 [node name="Walls" type="Node2D" parent="."]
 
@@ -42,6 +43,7 @@ margin_bottom = 80.5565
 text = "5"
 
 [node name="Friend" parent="." instance=ExtResource( 4 )]
+position = Vector2( 449.352, 179.25 )
 
 [node name="Friend2" parent="." instance=ExtResource( 4 )]
 position = Vector2( 366, 663 )
