@@ -1,13 +1,10 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://level1.png" type="Texture" id=1]
-[ext_resource path="res://Player.gd" type="Script" id=2]
-[ext_resource path="res://icon.png" type="Texture" id=3]
-[ext_resource path="res://Friend.gd" type="Script" id=4]
-[ext_resource path="res://person_friend.png" type="Texture" id=5]
-[ext_resource path="res://Pizza.gd" type="Script" id=6]
-
-[sub_resource type="CircleShape2D" id=1]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Friend.tscn" type="PackedScene" id=3]
+[ext_resource path="res://icon.png" type="Texture" id=4]
+[ext_resource path="res://Pizza.tscn" type="PackedScene" id=5]
 
 [node name="Level 1" type="Node2D"]
 
@@ -16,40 +13,9 @@ position = Vector2( 403.129, 401.197 )
 scale = Vector2( 0.347749, 0.355566 )
 texture = ExtResource( 1 )
 
-[node name="Player" type="KinematicBody2D" parent="."]
-position = Vector2( 509, 338 )
-script = ExtResource( 2 )
+[node name="Player" parent="." instance=ExtResource( 2 )]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-shape = SubResource( 1 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Sprite" type="Sprite" parent="Player"]
-modulate = Color( 1.09724, 0, 1.10588, 1 )
-texture = ExtResource( 3 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Friend" type="KinematicBody2D" parent="."]
-position = Vector2( 382, 135 )
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 4 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Friend"]
-shape = SubResource( 1 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Sprite" type="Sprite" parent="Friend"]
-modulate = Color( 0, 1.10588, 0.146875, 1 )
-texture = ExtResource( 5 )
-__meta__ = {
-"_edit_lock_": true
-}
+[node name="Friend" parent="." instance=ExtResource( 3 )]
 
 [node name="Walls" type="Node2D" parent="."]
 
@@ -60,22 +26,20 @@ polygon = PoolVector2Array( 344, 201, 633, 200, 630, 264, 342, 265 )
 
 [node name="icon" type="Sprite" parent="Walls"]
 position = Vector2( 375, 234 )
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="icon2" type="Sprite" parent="Walls"]
 position = Vector2( 449, 235 )
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="icon3" type="Sprite" parent="Walls"]
 position = Vector2( 523, 235 )
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="icon4" type="Sprite" parent="Walls"]
 position = Vector2( 598, 234 )
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="PizzaBox" type="Node2D" parent="."]
 
-[node name="Pizza" type="Sprite" parent="PizzaBox"]
-script = ExtResource( 6 )
-[connection signal="mouse_entered" from="Friend" to="Friend" method="_on_Friend_mouse_entered"]
+[node name="Pizza" parent="PizzaBox" instance=ExtResource( 5 )]
