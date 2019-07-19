@@ -10,12 +10,6 @@ radius = 33.9832
 position = Vector2( 509, 338 )
 script = ExtResource( 1 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 1 )
-__meta__ = {
-"_edit_lock_": true
-}
-
 [node name="Sprite" type="Sprite" parent="."]
 modulate = Color( 1.09724, 0, 1.10588, 1 )
 scale = Vector2( 0.5, 0.5 )
@@ -23,3 +17,10 @@ texture = ExtResource( 2 )
 __meta__ = {
 "_edit_lock_": true
 }
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+

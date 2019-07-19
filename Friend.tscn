@@ -4,18 +4,14 @@
 [ext_resource path="res://person_friend.png" type="Texture" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 95.5163
+radius = 62.1289
 
-[node name="Friend" type="KinematicBody2D"]
+[node name="Friend" type="KinematicBody2D" groups=[
+"friend",
+]]
 position = Vector2( 382, 135 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 1 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 1 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Sprite" type="Sprite" parent="."]
 modulate = Color( 0, 1.10588, 0.146875, 1 )
@@ -24,5 +20,10 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
 [connection signal="mouse_entered" from="." to="." method="_on_Friend_mouse_entered"]

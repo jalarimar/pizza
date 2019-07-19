@@ -1,10 +1,16 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://level1.png" type="Texture" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Friend.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Pizza.tscn" type="PackedScene" id=4]
-[ext_resource path="res://person_normal.png" type="Texture" id=5]
+[ext_resource path="res://FriendNavigator.gd" type="Script" id=3]
+[ext_resource path="res://Friend.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Pizza.tscn" type="PackedScene" id=5]
+[ext_resource path="res://person_normal.png" type="Texture" id=6]
+
+[sub_resource type="NavigationPolygon" id=2]
+vertices = PoolVector2Array( 264, 27, 261, 264, 167, 242, 16, 29, 590, 778, 19, 776, 15, 274, 137, 294, 604, 703, 136, 239, 19, 253, 166, 295, 494, 576, 283, 24, 786, 23, 793, 773, 621, 597, 635, 783, 554, 541, 540, 525, 515, 586, 595, 615, 264, 289, 281, 274 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 5, 6, 7, 8 ), PoolIntArray( 9, 10, 3 ), PoolIntArray( 9, 3, 2 ), PoolIntArray( 7, 9, 2, 11 ), PoolIntArray( 8, 7, 11, 12 ), PoolIntArray( 13, 14, 15, 16 ), PoolIntArray( 15, 17, 16 ), PoolIntArray( 13, 16, 18, 19 ), PoolIntArray( 20, 21, 8 ), PoolIntArray( 11, 22, 12 ), PoolIntArray( 20, 8, 12 ), PoolIntArray( 20, 12, 19, 18 ), PoolIntArray( 13, 19, 23 ) ]
+outlines = [ PoolVector2Array( 16, 29, 264, 27, 261, 264, 167, 242, 166, 295, 264, 289, 494, 576, 540, 525, 281, 274, 283, 24, 786, 23, 793, 773, 635, 783, 621, 597, 554, 541, 515, 586, 595, 615, 604, 703, 590, 778, 19, 776, 15, 274, 137, 294, 136, 239, 19, 253 ) ]
 
 [node name="Level 1" type="Node2D"]
 
@@ -15,11 +21,6 @@ texture = ExtResource( 1 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 
-[node name="Friend" parent="." instance=ExtResource( 3 )]
-
-[node name="Friend2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 199.697, 586.346 )
-
 [node name="Walls" type="Node2D" parent="."]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Walls"]
@@ -27,11 +28,11 @@ position = Vector2( 199.697, 586.346 )
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Walls/StaticBody2D"]
 polygon = PoolVector2Array( 265.797, 21.4163, 262.121, 266.937, 195.228, 263.261, 195.228, 275.758, 264.327, 286.049, 492.94, 535.98, 501.761, 522.749, 276.823, 272.818, 280.499, 22.1513, 788.447, 18.4759, 796.533, 772.68, 609.82, 783.706, 625.257, 702.111, 614.965, 600.668, 556.158, 573.47, 552.483, 582.291, 600.999, 608.019, 612.025, 701.376, 598.793, 780.766, 307.697, 775.62, 15.1307, 780.031, 18.071, 466.147, 12.9254, 269.877, 115.103, 267.672, 114.368, 256.646, 14.3956, 258.116, 15.1307, 25.0917, 254.035, 23.6215, -26.0344, -35.1858, -15.7432, 802.819, 837.698, 803.554, 822.261, -15.3383, 256.241, -15.3383 )
 
-[node name="PizzaBox" type="Node2D" parent="."]
-position = Vector2( 133.787, 132.316 )
+[node name="Navigation2D" type="Navigation2D" parent="Walls"]
+script = ExtResource( 3 )
 
-[node name="Pizza" parent="PizzaBox" instance=ExtResource( 4 )]
-texture = ExtResource( 5 )
+[node name="NavigationPolygonInstance2" type="NavigationPolygonInstance" parent="Walls/Navigation2D"]
+navpoly = SubResource( 2 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 margin_left = 711.838
@@ -39,3 +40,17 @@ margin_top = 40.5565
 margin_right = 762.838
 margin_bottom = 80.5565
 text = "5"
+
+[node name="Friend" parent="." instance=ExtResource( 4 )]
+
+[node name="Friend2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 366, 663 )
+
+[node name="PizzaBox" type="Node2D" parent="." groups=[
+"pizza_box",
+]]
+position = Vector2( 133.787, 132.316 )
+
+[node name="Pizza" parent="PizzaBox" instance=ExtResource( 5 )]
+texture = ExtResource( 6 )
+
