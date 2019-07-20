@@ -129,7 +129,7 @@ position = Vector2( 64.3373, 233.318 )
 texture = ExtResource( 13 )
 
 [node name="Player" parent="." instance=ExtResource( 14 )]
-position = Vector2( 307.172, 696.278 )
+position = Vector2( 628.84, 372.156 )
 
 [node name="Friend" parent="." instance=ExtResource( 15 )]
 position = Vector2( 449.352, 179.25 )

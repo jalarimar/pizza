@@ -1,6 +1,7 @@
 extends KinematicBody2D
 signal speak_pizza
 
+# stats
 var speak_range = 1      # 1, 2, 3
 var is_chatty = false
 var hungryness = 1    # 1, 2, 3
@@ -9,15 +10,9 @@ var is_aware = false
 var direction = Vector2.UP
 var speed = 200
 
+# variables
+var full = false
 var target = null
-
-enum State {
-    IDLE,
-    HUNTING,
-    FULL,
-}
-
-var state = State.IDLE
 
 func _ready():
     # randomly generate stats
@@ -25,10 +20,10 @@ func _ready():
     # set image depending on stats
     $Sprite.texture = load("res://person_friend.png")
     
-func _physics_process(delta):
-    if is_aware:
+func _process(delta):
+    if is_aware and not full:
         move_and_slide(direction * speed)
-        
+
 func on_reach_pizza():
     if not is_aware:
         is_aware = true
@@ -37,6 +32,7 @@ func on_reach_pizza():
     if target.is_in_group("pizza_slices"):
         target.be_eaten(position)
         yield(target, "eaten")
+        full = true
         target = null
 
 
