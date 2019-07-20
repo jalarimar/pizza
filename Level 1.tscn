@@ -24,136 +24,136 @@ polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 5, 6, 7, 8 ), PoolIntA
 outlines = [ PoolVector2Array( 16, 29, 264, 27, 261, 264, 167, 242, 166, 295, 264, 289, 494, 576, 540, 525, 281, 274, 283, 24, 786, 23, 793, 773, 635, 783, 621, 597, 554, 541, 515, 586, 595, 615, 604, 703, 590, 778, 19, 776, 15, 274, 137, 294, 136, 239, 19, 253 ) ]
 
 [node name="Level 1" type="Node2D"]
-position = Vector2( -15.0734, 100.991 )
 
-[node name="background" type="Sprite" parent="."]
+[node name="Content" type="Node2D" parent="."]
+position = Vector2( -0.336614, 102.044 )
+
+[node name="background" type="Sprite" parent="Content"]
 position = Vector2( 403.129, 401.197 )
 scale = Vector2( 0.347749, 0.355566 )
 texture = ExtResource( 1 )
 
-[node name="NotificationController" parent="." instance=ExtResource( 2 )]
+[node name="NotificationController" parent="Content" instance=ExtResource( 2 )]
 
-[node name="NavigationController" type="Navigation2D" parent="."]
+[node name="NavigationController" type="Navigation2D" parent="Content"]
 editor/display_folded = true
 script = ExtResource( 3 )
 
-[node name="NavigationPolygonInstance2" type="NavigationPolygonInstance" parent="NavigationController"]
+[node name="NavigationPolygonInstance2" type="NavigationPolygonInstance" parent="Content/NavigationController"]
 navpoly = SubResource( 1 )
 
-[node name="Walls2" type="StaticBody2D" parent="."]
+[node name="Walls2" type="StaticBody2D" parent="Content"]
 editor/display_folded = true
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Walls2"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Content/Walls2"]
 polygon = PoolVector2Array( 265.797, 21.4163, 262.121, 266.937, 195.228, 263.261, 195.228, 275.758, 264.327, 286.049, 492.94, 535.98, 501.761, 522.749, 276.823, 272.818, 280.499, 22.1513, 788.447, 18.4759, 796.533, 772.68, 609.82, 783.706, 625.257, 702.111, 614.965, 600.668, 556.158, 573.47, 552.483, 582.291, 600.999, 608.019, 612.025, 701.376, 598.793, 780.766, 307.697, 775.62, 15.1307, 780.031, 18.071, 466.147, 12.9254, 269.877, 115.103, 267.672, 114.368, 256.646, 14.3956, 258.116, 15.1307, 25.0917, 254.035, 23.6215, -26.0344, -35.1858, -15.7432, 802.819, 837.698, 803.554, 822.261, -15.3383, 256.241, -15.3383 )
 
-[node name="Pizza" type="Node2D" parent="."]
+[node name="Pizza" type="Node2D" parent="Content"]
 
-[node name="PizzaBox" type="Area2D" parent="Pizza" groups=[
+[node name="PizzaBox" type="Area2D" parent="Content/Pizza" groups=[
 "pizza_box",
 ]]
 position = Vector2( 181.204, 601.335 )
 script = ExtResource( 4 )
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Pizza/PizzaBox"]
+[node name="StaticBody2D" type="StaticBody2D" parent="Content/Pizza/PizzaBox"]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Pizza/PizzaBox/StaticBody2D"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Content/Pizza/PizzaBox/StaticBody2D"]
 polygon = PoolVector2Array( -29.3756, -92.4961, -67.2806, -81.666, -93.4531, -69.0311, -113.308, -48.2736, -124.138, -8.5636, -122.333, 24.829, -101.576, 50.0989, -70.8906, 68.1489, -37.4981, 81.6865, 2.21188, 84.3939, 43.7269, 82.5889, 71.7044, 76.2714, 87.9494, 70.8564, 105.999, 52.8065, 121.342, 27.5364, 128.562, 7.6814, 128.562, -15.7836, 122.244, -29.321, 112.317, -51.8835, 94.2669, -72.6411, 78.9244, -85.2761, 50.9469, -93.3986, 11.2369, -95.2036 )
 
-[node name="Table" type="Sprite" parent="Pizza/PizzaBox"]
+[node name="Table" type="Sprite" parent="Content/Pizza/PizzaBox"]
 position = Vector2( -10.2913, 15.5972 )
 scale = Vector2( 0.319832, 0.319519 )
 texture = ExtResource( 5 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Pizza/PizzaBox"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Content/Pizza/PizzaBox"]
 polygon = PoolVector2Array( -24.8631, -107.839, -60.0606, -101.521, -96.1606, -87.0811, -113.308, -71.7385, -132.261, -37.4436, -139.481, 4.07141, -131.358, 40.1714, -106.991, 63.6364, -76.3056, 81.6865, -38.4006, 95.2239, 31.9944, 97.9315, 91.5593, 86.1989, 126.757, 57.3189, 143.904, 12.194, 134.879, -47.3711, 112.317, -78.9586, 69.8994, -101.521, 19.3594, -109.644 )
 
-[node name="Pizza" parent="Pizza" instance=ExtResource( 6 )]
+[node name="Pizza" parent="Content/Pizza" instance=ExtResource( 6 )]
 editor/display_folded = true
 position = Vector2( 195.878, 547.192 )
 
-[node name="cheese_pizza1" type="Sprite" parent="Pizza/Pizza"]
+[node name="cheese_pizza1" type="Sprite" parent="Content/Pizza/Pizza"]
 position = Vector2( -89.3305, 223.904 )
 texture = ExtResource( 7 )
 
-[node name="Pizza2" parent="Pizza" instance=ExtResource( 6 )]
+[node name="Pizza2" parent="Content/Pizza" instance=ExtResource( 6 )]
 editor/display_folded = true
 position = Vector2( 232.262, 572.693 )
 
-[node name="cheese_pizza2" type="Sprite" parent="Pizza/Pizza2"]
+[node name="cheese_pizza2" type="Sprite" parent="Content/Pizza/Pizza2"]
 position = Vector2( -256.193, 108.184 )
 texture = ExtResource( 8 )
 
-[node name="Pizza3" parent="Pizza" instance=ExtResource( 6 )]
+[node name="Pizza3" parent="Content/Pizza" instance=ExtResource( 6 )]
 editor/display_folded = true
 position = Vector2( 234.935, 614.595 )
 
-[node name="cheese_pizza3" type="Sprite" parent="Pizza/Pizza3"]
+[node name="cheese_pizza3" type="Sprite" parent="Content/Pizza/Pizza3"]
 position = Vector2( -272.036, -78.2795 )
 texture = ExtResource( 9 )
 
-[node name="Pizza4" parent="Pizza" instance=ExtResource( 6 )]
+[node name="Pizza4" parent="Content/Pizza" instance=ExtResource( 6 )]
 editor/display_folded = true
 position = Vector2( 205.031, 645.76 )
 
-[node name="cheese_pizza4" type="Sprite" parent="Pizza/Pizza4"]
+[node name="cheese_pizza4" type="Sprite" parent="Content/Pizza/Pizza4"]
 position = Vector2( -124.268, -208.085 )
 texture = ExtResource( 10 )
 
-[node name="Pizza5" parent="Pizza" instance=ExtResource( 6 )]
+[node name="Pizza5" parent="Content/Pizza" instance=ExtResource( 6 )]
 editor/display_folded = true
 position = Vector2( 160.608, 648.704 )
 
-[node name="cheese_pizza5" type="Sprite" parent="Pizza/Pizza5"]
+[node name="cheese_pizza5" type="Sprite" parent="Content/Pizza/Pizza5"]
 position = Vector2( 78.9045, -220.774 )
 texture = ExtResource( 11 )
 
-[node name="Pizza6" parent="Pizza" instance=ExtResource( 6 )]
+[node name="Pizza6" parent="Content/Pizza" instance=ExtResource( 6 )]
 editor/display_folded = true
 position = Vector2( 129.888, 621.619 )
 
-[node name="cheese_pizza6" type="Sprite" parent="Pizza/Pizza6"]
+[node name="cheese_pizza6" type="Sprite" parent="Content/Pizza/Pizza6"]
 position = Vector2( 209.336, -91.2314 )
 texture = ExtResource( 12 )
 
-[node name="Pizza7" parent="Pizza" instance=ExtResource( 6 )]
+[node name="Pizza7" parent="Content/Pizza" instance=ExtResource( 6 )]
 editor/display_folded = true
 position = Vector2( 130.58, 576.95 )
 
-[node name="cheese_pizza7" type="Sprite" parent="Pizza/Pizza7"]
+[node name="cheese_pizza7" type="Sprite" parent="Content/Pizza/Pizza7"]
 position = Vector2( 203.293, 115.577 )
 texture = ExtResource( 13 )
 
-[node name="Pizza8" parent="Pizza" instance=ExtResource( 6 )]
+[node name="Pizza8" parent="Content/Pizza" instance=ExtResource( 6 )]
 editor/display_folded = true
 position = Vector2( 158.256, 546.576 )
 
-[node name="cheese_pizza8" type="Sprite" parent="Pizza/Pizza8"]
+[node name="cheese_pizza8" type="Sprite" parent="Content/Pizza/Pizza8"]
 position = Vector2( 64.3373, 233.318 )
 texture = ExtResource( 14 )
 
-[node name="Player" parent="." instance=ExtResource( 15 )]
+[node name="Player" parent="Content" instance=ExtResource( 15 )]
 position = Vector2( 628.84, 372.156 )
 
-[node name="Friend" parent="." instance=ExtResource( 16 )]
+[node name="Friend" parent="Content" instance=ExtResource( 16 )]
 position = Vector2( 449.352, 179.25 )
 
-[node name="Friend3" parent="." instance=ExtResource( 16 )]
+[node name="Friend3" parent="Content" instance=ExtResource( 16 )]
 position = Vector2( 498.827, 257.794 )
 
-[node name="Friend4" parent="." instance=ExtResource( 16 )]
+[node name="Friend4" parent="Content" instance=ExtResource( 16 )]
 position = Vector2( 545.294, 345.359 )
 
-[node name="Friend5" parent="." instance=ExtResource( 16 )]
+[node name="Friend5" parent="Content" instance=ExtResource( 16 )]
 position = Vector2( 377.753, 184.978 )
 
-[node name="Friend6" parent="." instance=ExtResource( 16 )]
+[node name="Friend6" parent="Content" instance=ExtResource( 16 )]
 position = Vector2( 417.849, 101.923 )
 
-[node name="Friend2" parent="." instance=ExtResource( 16 )]
+[node name="Friend2" parent="Content" instance=ExtResource( 16 )]
 position = Vector2( 149.772, 143.194 )
 
 [node name="ScoreBar" parent="." instance=ExtResource( 17 )]
-position = Vector2( 468.405, 406.926 )
-scale = Vector2( 1.0039, 0.995431 )
 
-[connection signal="body_entered" from="Pizza/PizzaBox" to="Pizza/PizzaBox" method="on_body_enter"]
+[connection signal="body_entered" from="Content/Pizza/PizzaBox" to="Content/Pizza/PizzaBox" method="on_body_enter"]
