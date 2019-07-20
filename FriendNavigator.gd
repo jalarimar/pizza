@@ -10,7 +10,7 @@ func _draw():
 func _process(delta):
     var pizza_box = get_tree().get_nodes_in_group("pizza_box")[0]
     for friend in get_tree().get_nodes_in_group("friend"):
-        if not friend.is_aware:
+        if not friend.is_aware or friend.full:
             continue
         
         var target
