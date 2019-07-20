@@ -1,4 +1,4 @@
-extends Sprite
+extends Node2D
 signal eaten
 
 var is_claimed = false

@@ -21,8 +21,8 @@ func _physics_process(delta):
         if body.has_method("hear_pizza"):
             body.hear_pizza()
             
-func _process(delta):
-    update()
-            
-func _draw():
-    draw_circle(Vector2(), $CollisionShape2D.shape.radius, Color.black)
+#func _process(delta):
+#    update()
+#
+#func _draw():
+#    draw_circle(Vector2(), $CollisionShape2D.shape.radius, Color.black)

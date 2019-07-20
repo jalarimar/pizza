@@ -11,18 +11,24 @@ var speed = 200
 
 var target = null
 
+enum State {
+    IDLE,
+    HUNTING,
+    FULL,
+}
+
+var state = State.IDLE
+
 func _ready():
     # randomly generate stats
     
     # set image depending on stats
     $Sprite.texture = load("res://person_friend.png")
     
-func _process(delta):
+func _physics_process(delta):
     if is_aware:
         move_and_slide(direction * speed)
-    else:
-        pass
-
+        
 func on_reach_pizza():
     if not is_aware:
         is_aware = true
