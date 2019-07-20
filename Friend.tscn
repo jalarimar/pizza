@@ -7,8 +7,8 @@
 radius = 62.1289
 
 [node name="Friend" type="KinematicBody2D" groups=[
-"friend",
 "people",
+"friend",
 ]]
 scale = Vector2( 0.219, 0.219 )
 script = ExtResource( 1 )
@@ -25,4 +25,5 @@ shape = SubResource( 1 )
 __meta__ = {
 "_edit_lock_": true
 }
+
 [connection signal="mouse_entered" from="." to="." method="_on_Friend_mouse_entered"]

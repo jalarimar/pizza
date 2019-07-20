@@ -9,6 +9,8 @@ var is_aware = false
 var direction = Vector2.UP
 var speed = 200
 
+var target = null
+
 func _ready():
     # randomly generate stats
     
@@ -20,19 +22,16 @@ func _process(delta):
         move_and_slide(direction * speed)
     else:
         pass
-        # use normal path
-        
 
-func on_reach_pizza_box():
+func on_reach_pizza():
     if not is_aware:
         is_aware = true
         emit_signal("speak_pizza", position, speak_range)
-    for pizza in get_parent().get_node("PizzaBox").get_children():
-        if not pizza.is_claimed:
-            pizza.is_claimed = true
-            # move pizza
-            pizza.queue_free()
-            break
+    
+    if target.is_in_group("pizza_slices"):
+        target.be_eaten(position)
+        yield(target, "eaten")
+        target = null
 
 
 func make_comments():

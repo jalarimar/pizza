@@ -3,9 +3,13 @@
 [ext_resource path="res://person_normal.png" type="Texture" id=1]
 [ext_resource path="res://Pizza.gd" type="Script" id=2]
 
-[node name="Pizza" type="Sprite"]
+[node name="Pizza" type="Sprite" groups=[
+"pizza_slices",
+]]
 modulate = Color( 0.623529, 0.211765, 0.211765, 1 )
 scale = Vector2( 0.196857, 0.196857 )
 texture = ExtResource( 1 )
 script = ExtResource( 2 )
+
+[node name="Tween" type="Tween" parent="."]
 

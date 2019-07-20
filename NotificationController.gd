@@ -12,4 +12,4 @@ func create_notification(position, speak_range):
     var notification = preload("res://Notification.tscn").instance()
     notification.global_position = position
     notification.speak_range = speak_range
-    get_parent().add_child(notification) # add notification on same level as notification controller
+    add_child(notification) # add notification on same level as notification controller

@@ -1,16 +1,39 @@
 extends Navigation2D
 
 func _draw():
-    var pizza_box = get_tree().get_nodes_in_group("pizza_box")[0]
     for friend in get_tree().get_nodes_in_group("friend"):
-        var path = get_simple_path(friend.position, pizza_box.position)
-        for i in range(path.size() - 1):
-            draw_line(path[i], path[i+1], Color.aliceblue, 5)
+        if friend.is_aware and friend.target:
+            var path = get_simple_path(friend.position, friend.target.position)
+            for i in range(path.size() - 1):
+                draw_line(path[i], path[i+1], Color.aliceblue, 5)
 
 func _process(delta):
     var pizza_box = get_tree().get_nodes_in_group("pizza_box")[0]
     for friend in get_tree().get_nodes_in_group("friend"):
-        var path = get_simple_path(friend.position, pizza_box.position)
+        if not friend.is_aware:
+            continue
+        
+        var target
+        # if we already have a target, use that.
+        if friend.target != null:
+            target = friend.target
+        
+        # otherwise, try to claim a pizza slice as a target
+        if target == null: 
+            for pizza in get_tree().get_nodes_in_group("pizza_slices"):
+                if not pizza.is_claimed:
+                    pizza.is_claimed = true
+                    friend.target = pizza
+                    target = pizza
+                    break
+                    
+        
+        # otherwise the pizza box is our target
+        if target == null:
+            friend.target = pizza_box
+            target = pizza_box
+
+        var path = get_simple_path(friend.position, target.position)
         if path.size() > 1:
             friend.direction = (path[1] - friend.position).normalized()
     update()
