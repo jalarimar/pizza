@@ -1,3 +1,10 @@
 [gd_scene format=2]
 
-[node name="Score bar" type="Sprite"]
+[node name="Score bar" type="Node"]
+
+[node name="Score" type="RichTextLabel" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+text = "5 / 10"
+
+[node name="Score meter" type="Sprite" parent="."]

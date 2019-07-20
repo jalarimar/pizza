@@ -1,7 +1,7 @@
 extends KinematicBody2D
-signal pizza
+signal speak_pizza
 
-var speak_range = 5
+var speak_range = 1
 var speed = 200
 var is_mouse_hover = false
 
@@ -16,5 +16,5 @@ func _physics_process(delta):
 
 func _input(event):
 	if event.is_action_pressed("space"):
-		emit_signal("pizza", position)
+		emit_signal("speak_pizza", position, speak_range)
 
