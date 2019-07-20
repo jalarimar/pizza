@@ -13,3 +13,8 @@ func _physics_process(delta):
         movement = movement.normalized()
     movement = movement * speed
     move_and_slide(movement)
+
+func _input(event):
+	if event.is_action_pressed("space"):
+		emit_signal("pizza", position)
+

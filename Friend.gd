@@ -40,3 +40,8 @@ func make_comments():
 func _on_Friend_mouse_entered():
 	# show friend list
 	pass
+
+
+# when the friend hears pizza
+func _on_Friend_pizza():
+	is_aware = true
