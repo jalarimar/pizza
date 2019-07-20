@@ -1,11 +1,12 @@
 extends KinematicBody2D
 signal speak_pizza
+signal eat
 
 # stats
 var speak_range = 1      # 1, 2, 3
 var is_chatty = false
 var hungryness = 1    # 1, 2, 3
-var coolness = 0      # -5, 1, 5, 20
+var coolness = 1      # -5, 1, 5, 20
 var is_aware = false
 var direction = Vector2.UP
 var speed = 200
@@ -34,6 +35,7 @@ func on_reach_pizza():
         yield(target, "eaten")
         full = true
         target = null
+        emit_signal("eat", coolness)
 
 
 func make_comments():

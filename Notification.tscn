@@ -39,9 +39,9 @@ margin_bottom = 17.2533
 
 [node name="Label" type="Label" parent="PizzaSpeech"]
 margin_left = 0.771072
-margin_top = -1.54214
+margin_top = -1.67066
 margin_right = 43.7711
-margin_bottom = 16.4579
+margin_bottom = 16.3293
 rect_rotation = 6.90672
 custom_styles/normal = SubResource( 2 )
 custom_colors/font_color = Color( 0.67451, 0.192157, 0.192157, 1 )
