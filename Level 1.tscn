@@ -1,9 +1,9 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://level1.png" type="Texture" id=1]
 [ext_resource path="res://NotificationController.tscn" type="PackedScene" id=2]
 [ext_resource path="res://PizzaBox.gd" type="Script" id=3]
-[ext_resource path="res://person_normal.png" type="Texture" id=4]
+[ext_resource path="res://table.png" type="Texture" id=4]
 [ext_resource path="res://Pizza.tscn" type="PackedScene" id=5]
 [ext_resource path="res://cheese_pizza1.png" type="Texture" id=6]
 [ext_resource path="res://cheese_pizza2.png" type="Texture" id=7]
@@ -16,19 +16,21 @@
 [ext_resource path="res://Player.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Friend.tscn" type="PackedScene" id=15]
 [ext_resource path="res://FriendNavigator.gd" type="Script" id=16]
+[ext_resource path="res://ScoreBar.tscn" type="PackedScene" id=17]
 
-[sub_resource type="CircleShape2D" id=2]
+[sub_resource type="CircleShape2D" id=1]
 radius = 77.214
 
-[sub_resource type="CircleShape2D" id=3]
+[sub_resource type="CircleShape2D" id=2]
 radius = 98.2222
 
-[sub_resource type="NavigationPolygon" id=1]
+[sub_resource type="NavigationPolygon" id=3]
 vertices = PoolVector2Array( 264, 27, 261, 264, 167, 242, 16, 29, 590, 778, 19, 776, 15, 274, 137, 294, 604, 703, 136, 239, 19, 253, 166, 295, 494, 576, 283, 24, 786, 23, 793, 773, 621, 597, 635, 783, 554, 541, 540, 525, 515, 586, 595, 615, 264, 289, 281, 274 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 5, 6, 7, 8 ), PoolIntArray( 9, 10, 3 ), PoolIntArray( 9, 3, 2 ), PoolIntArray( 7, 9, 2, 11 ), PoolIntArray( 8, 7, 11, 12 ), PoolIntArray( 13, 14, 15, 16 ), PoolIntArray( 15, 17, 16 ), PoolIntArray( 13, 16, 18, 19 ), PoolIntArray( 20, 21, 8 ), PoolIntArray( 11, 22, 12 ), PoolIntArray( 20, 8, 12 ), PoolIntArray( 20, 12, 19, 18 ), PoolIntArray( 13, 19, 23 ) ]
 outlines = [ PoolVector2Array( 16, 29, 264, 27, 261, 264, 167, 242, 166, 295, 264, 289, 494, 576, 540, 525, 281, 274, 283, 24, 786, 23, 793, 773, 635, 783, 621, 597, 554, 541, 515, 586, 595, 615, 604, 703, 590, 778, 19, 776, 15, 274, 137, 294, 136, 239, 19, 253 ) ]
 
 [node name="Level 1" type="Node2D"]
+position = Vector2( -15.0734, 100.991 )
 
 [node name="background" type="Sprite" parent="."]
 position = Vector2( 403.129, 401.197 )
@@ -54,14 +56,15 @@ script = ExtResource( 3 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Pizza/PizzaBox/StaticBody2D"]
 position = Vector2( 2.33264, -2.3327 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pizza/PizzaBox"]
 position = Vector2( 2.33264, -2.3327 )
-shape = SubResource( 3 )
+shape = SubResource( 2 )
 
-[node name="Sprite" type="Sprite" parent="Pizza/PizzaBox"]
-scale = Vector2( 0.767777, 0.767777 )
+[node name="Table" type="Sprite" parent="Pizza/PizzaBox"]
+position = Vector2( -10.2913, 15.5972 )
+scale = Vector2( 0.319832, 0.319519 )
 texture = ExtResource( 4 )
 
 [node name="Pizza" parent="Pizza" instance=ExtResource( 5 )]
@@ -153,6 +156,9 @@ position = Vector2( 149.772, 143.194 )
 script = ExtResource( 16 )
 
 [node name="NavigationPolygonInstance2" type="NavigationPolygonInstance" parent="NavigationController"]
-navpoly = SubResource( 1 )
+navpoly = SubResource( 3 )
 
+[node name="ScoreBar" parent="." instance=ExtResource( 17 )]
+position = Vector2( 468.405, 406.926 )
+scale = Vector2( 1.0039, 0.995431 )
 [connection signal="body_entered" from="Pizza/PizzaBox" to="Pizza/PizzaBox" method="on_body_enter"]
