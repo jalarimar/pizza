@@ -9,7 +9,7 @@ onready var bar_end = $GreenBarEnd.position
 
 func _ready():
 	for friend in get_tree().get_nodes_in_group("friend"):
-		nFriends += 1
+		nFriends += friend.coolness
 		friend.connect("eat", self, "add_to_score")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

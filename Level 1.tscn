@@ -36,7 +36,6 @@ texture = ExtResource( 1 )
 [node name="NotificationController" parent="Content" instance=ExtResource( 2 )]
 
 [node name="NavigationController" type="Navigation2D" parent="Content"]
-editor/display_folded = true
 script = ExtResource( 3 )
 
 [node name="NavigationPolygonInstance2" type="NavigationPolygonInstance" parent="Content/NavigationController"]
@@ -67,6 +66,7 @@ scale = Vector2( 0.319832, 0.319519 )
 texture = ExtResource( 5 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Content/Pizza/PizzaBox"]
+scale = Vector2( 1.21671, 1.31486 )
 polygon = PoolVector2Array( -24.8631, -107.839, -60.0606, -101.521, -96.1606, -87.0811, -113.308, -71.7385, -132.261, -37.4436, -139.481, 4.07141, -131.358, 40.1714, -106.991, 63.6364, -76.3056, 81.6865, -38.4006, 95.2239, 31.9944, 97.9315, 91.5593, 86.1989, 126.757, 57.3189, 143.904, 12.194, 134.879, -47.3711, 112.317, -78.9586, 69.8994, -101.521, 19.3594, -109.644 )
 
 [node name="Pizza" parent="Content/Pizza" instance=ExtResource( 6 )]
@@ -155,5 +155,4 @@ position = Vector2( 417.849, 101.923 )
 position = Vector2( 149.772, 143.194 )
 
 [node name="ScoreBar" parent="." instance=ExtResource( 17 )]
-
 [connection signal="body_entered" from="Content/Pizza/PizzaBox" to="Content/Pizza/PizzaBox" method="on_body_enter"]

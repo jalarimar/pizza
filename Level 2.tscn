@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://level2.png" type="Texture" id=1]
 [ext_resource path="res://NotificationController.tscn" type="PackedScene" id=2]
@@ -18,6 +18,21 @@
 [ext_resource path="res://Friend.tscn" type="PackedScene" id=16]
 [ext_resource path="res://ScoreBar.tscn" type="PackedScene" id=17]
 
+[sub_resource type="NavigationPolygon" id=1]
+vertices = PoolVector2Array( 496.037, 200.656, 790.537, 17.306, 791.487, 303.256, 591.987, 304.206, 533.463, 303.794, 490.855, 303.28, 492.395, 254.513, 475.968, 255.539, 473.402, 362.315, 293.92, 386.544, 292.369, 327.17, 292.369, 163.902, 474.187, 200.656, 780.087, 317.506, 783.887, 365.956, 736.392, 364.036, 591.037, 320.356, 532.436, 320.22, 489.387, 13.506, 477.037, 17.306, 14.3866, 19.206, 173.98, 168.545, 114.137, 164.556, 275.637, 781.106, 12.4866, 783.006, 13.4366, 178.806, 113.187, 183.556, 272.787, 704.156, 751.587, 507.506, 793.387, 505.606, 793.387, 545.506, 748.737, 547.406, 705.037, 545.506, 732.41, 507.374, 746.837, 563.556, 704.087, 562.606, 631.887, 778.256, 492.237, 782.056, 493.187, 714.606, 632.837, 562.606, 495.087, 563.556, 492.237, 646.206, 736.392, 404.421, 734.686, 441.962, 491.369, 361.288, 789.587, 561.656, 792.437, 781.106, 648.037, 782.056, 648.987, 562.606, 493.187, 548.356, 494.137, 474.256, 473.237, 783.956, 290.837, 783.956, 292.737, 705.106, 473.237, 715.556, 491.882, 319.707, 14.3866, 163.606, 175.528, 179.378, 275.345, 182.473, 276.893, 303.183, 276.893, 327.17, 275.344, 629.356, 477.037, 646.206, 734.686, 466.42, 734.117, 480.64, 471.337, 474.256, 291.267, 630.019, 277.335, 387.871 )
+polygons = [ PoolIntArray( 0, 1, 2, 3, 4, 5, 6 ), PoolIntArray( 7, 8, 9, 10, 11, 12 ), PoolIntArray( 13, 14, 15, 16 ), PoolIntArray( 4, 3, 16, 17 ), PoolIntArray( 0, 18, 1 ), PoolIntArray( 12, 0, 6, 7 ), PoolIntArray( 19, 12, 11, 20 ), PoolIntArray( 20, 11, 21, 22 ), PoolIntArray( 23, 24, 25, 26, 27 ), PoolIntArray( 28, 29, 30, 31 ), PoolIntArray( 32, 33, 28, 31, 34, 35 ), PoolIntArray( 36, 37, 38, 39 ), PoolIntArray( 40, 39, 38, 41 ), PoolIntArray( 15, 42, 43, 9, 8, 44 ), PoolIntArray( 34, 45, 46, 47 ), PoolIntArray( 34, 47, 48, 35 ), PoolIntArray( 32, 49, 50 ), PoolIntArray( 51, 52, 53, 54 ), PoolIntArray( 44, 55, 17 ), PoolIntArray( 22, 56, 20 ), PoolIntArray( 26, 22, 21, 57 ), PoolIntArray( 27, 26, 57, 58, 59, 60, 61 ), PoolIntArray( 62, 41, 38, 54, 53 ), PoolIntArray( 9, 43, 63, 64, 33, 32, 50 ), PoolIntArray( 9, 50, 65 ), PoolIntArray( 66, 9, 65, 62, 53 ), PoolIntArray( 66, 53, 27, 61 ), PoolIntArray( 67, 61, 60 ), PoolIntArray( 9, 67, 60, 10 ), PoolIntArray( 16, 15, 44, 17 ) ]
+outlines = [ PoolVector2Array( 14.3866, 19.206, 477.037, 17.306, 474.187, 200.656, 496.037, 200.656, 489.387, 13.506, 790.537, 17.306, 791.487, 303.256, 591.987, 304.206, 591.037, 320.356, 780.087, 317.506, 783.887, 365.956, 736.392, 364.036, 736.392, 404.421, 734.686, 441.962, 734.686, 466.42, 734.117, 480.64, 732.41, 507.374, 751.587, 507.506, 793.387, 505.606, 793.387, 545.506, 748.737, 547.406, 746.837, 563.556, 789.587, 561.656, 792.437, 781.106, 648.037, 782.056, 648.987, 562.606, 704.087, 562.606, 705.037, 545.506, 493.187, 548.356, 494.137, 474.256, 471.337, 474.256, 477.037, 646.206, 492.237, 646.206, 495.087, 563.556, 632.837, 562.606, 631.887, 778.256, 492.237, 782.056, 493.187, 714.606, 473.237, 715.556, 473.237, 783.956, 290.837, 783.956, 292.737, 705.106, 272.787, 704.156, 275.637, 781.106, 12.4866, 783.006, 13.4366, 178.806, 113.187, 183.556, 114.137, 164.556, 14.3866, 163.606 ), PoolVector2Array( 276.893, 303.183, 276.893, 327.17, 292.369, 327.17, 292.369, 163.902, 173.98, 168.545, 175.528, 179.378, 275.345, 182.473 ), PoolVector2Array( 277.335, 387.871, 293.92, 386.544, 291.267, 630.019, 275.344, 629.356 ), PoolVector2Array( 475.968, 255.539, 492.395, 254.513, 490.855, 303.28, 533.463, 303.794, 532.436, 320.22, 491.882, 319.707, 491.369, 361.288, 473.402, 362.315 ) ]
+
+[sub_resource type="Curve2D" id=2]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -79.5544, -136.264, 0, 0, 0, 0, -63.1461, 421.614, 0, 0, 0, 0, 886.185, 203.62, 0, 0, 0, 0, 815.864, -776.184, 0, 0, 0, 0, -93.6185, -719.927, 0, 0, 0, 0, -77.2102, -143.297 )
+}
+
+[sub_resource type="Curve2D" id=3]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 1217.42, 513.757, 0, 0, 0, 0, 1928.51, 172.561, 0, 0, 0, 0, 919.855, -813.265, 0, 0, 0, 0, 936.263, 290.772, 0, 0, 0, 0, -62.2933, 234.515, 0, 0, 0, 0, 1214.23, 516.946 )
+}
+
 [node name="Level 2" type="Node2D"]
 
 [node name="Content" type="Node2D" parent="."]
@@ -33,92 +48,104 @@ texture = ExtResource( 1 )
 [node name="NavigationController" type="Navigation2D" parent="Content"]
 script = ExtResource( 3 )
 
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Content/NavigationController"]
+navpoly = SubResource( 1 )
+
 [node name="Walls2" type="StaticBody2D" parent="Content"]
 
-[node name="Pizza" type="Node2D" parent="Content"]
-position = Vector2( 541.053, -50.5263 )
-scale = Vector2( 0.813726, 0.813726 )
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Content/Walls2"]
+polygon = PoolVector2Array( 636.39, 15.8512, 791.146, 15.0775, 793.468, 305.245, 614.724, 306.019, 613.95, 315.304, 795.789, 316.852, 795.015, 548.212, 774.897, 549.76, 774.123, 557.498, 793.468, 558.272, 795.128, 787.459, 645.443, 786.262, 645.443, 557.544, 683.164, 558.143, 683.762, 550.958, 489.772, 550.958, 487.377, 501.263, 480.791, 501.263, 480.791, 617.418, 488.574, 619.214, 489.173, 559.939, 635.863, 558.143, 637.66, 785.064, 488.574, 788.058, 488.574, 734.172, 477.198, 734.172, 477.797, 786.861, 289.793, 786.262, 290.392, 721.598, 278.417, 720.401, 279.615, 784.466, 7.39102, 786.37, 9.66622, 177.185, 92.1422, 178.891, 92.711, 169.79, 10.8038, 169.222, 11.34, 16.5756, 477.557, 16.0879, 478.533, 169.706, 485.506, 169.447, 486.019, 12.8773, 627.702, 14.4173, -44.6634, -55.294, -54.1634, 819.656, 888.237, 818.706, 878.737, -57.194 )
 
-[node name="PizzaBox" type="Area2D" parent="Content/Pizza" groups=[
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Content/Walls2"]
+polygon = PoolVector2Array( 201.665, 171.356, 202.105, 179.279, 279.567, 178.398, 280.007, 301.634, 289.25, 302.074, 289.69, 171.356 )
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Content/Walls2"]
+polygon = PoolVector2Array( 477.707, 276.894, 486.843, 276.894, 488.035, 305.891, 521.798, 306.288, 521.401, 317.013, 488.432, 317.013, 489.227, 346.009, 478.899, 346.009 )
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Content/Walls2"]
+polygon = PoolVector2Array( 278.011, 407.071, 289.015, 407.071, 289.455, 608.209, 279.332, 608.649 )
+
+[node name="PizzaBox" type="Area2D" parent="Content" groups=[
 "pizza_box",
 ]]
-position = Vector2( 181.204, 601.335 )
+position = Vector2( 695.843, 441.774 )
 script = ExtResource( 4 )
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Content/Pizza/PizzaBox"]
+[node name="StaticBody2D" type="StaticBody2D" parent="Content/PizzaBox"]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Content/Pizza/PizzaBox/StaticBody2D"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Content/PizzaBox/StaticBody2D"]
 polygon = PoolVector2Array( -29.3756, -92.4961, -67.2806, -81.666, -93.4531, -69.0311, -113.308, -48.2736, -124.138, -8.5636, -122.333, 24.829, -101.576, 50.0989, -70.8906, 68.1489, -37.4981, 81.6865, 2.21188, 84.3939, 43.7269, 82.5889, 71.7044, 76.2714, 87.9494, 70.8564, 105.999, 52.8065, 121.342, 27.5364, 128.562, 7.6814, 128.562, -15.7836, 122.244, -29.321, 112.317, -51.8835, 94.2669, -72.6411, 78.9244, -85.2761, 50.9469, -93.3986, 11.2369, -95.2036 )
 
-[node name="Table" type="Sprite" parent="Content/Pizza/PizzaBox"]
+[node name="Table" type="Sprite" parent="Content/PizzaBox/StaticBody2D"]
 position = Vector2( -10.2913, 15.5972 )
 scale = Vector2( 0.319832, 0.319519 )
 texture = ExtResource( 5 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Content/Pizza/PizzaBox"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Content/PizzaBox"]
+scale = Vector2( 1.13063, 1.11786 )
 polygon = PoolVector2Array( -24.8631, -107.839, -60.0606, -101.521, -96.1606, -87.0811, -113.308, -71.7385, -132.261, -37.4436, -139.481, 4.07141, -131.358, 40.1714, -106.991, 63.6364, -76.3056, 81.6865, -38.4006, 95.2239, 31.9944, 97.9315, 91.5593, 86.1989, 126.757, 57.3189, 143.904, 12.194, 134.879, -47.3711, 112.317, -78.9586, 69.8994, -101.521, 19.3594, -109.644 )
 
-[node name="Pizza" parent="Content/Pizza" instance=ExtResource( 6 )]
+[node name="Pizza" parent="Content/PizzaBox" instance=ExtResource( 6 )]
 editor/display_folded = true
-position = Vector2( 195.878, 547.192 )
+position = Vector2( 13.928, -64.2239 )
 
-[node name="cheese_pizza1" type="Sprite" parent="Content/Pizza/Pizza"]
+[node name="cheese_pizza1" type="Sprite" parent="Content/PizzaBox/Pizza"]
 position = Vector2( -89.3305, 223.904 )
 texture = ExtResource( 7 )
 
-[node name="Pizza2" parent="Content/Pizza" instance=ExtResource( 6 )]
+[node name="Pizza2" parent="Content/PizzaBox" instance=ExtResource( 6 )]
 editor/display_folded = true
-position = Vector2( 232.262, 572.693 )
+position = Vector2( 62.6763, -39.4629 )
 
-[node name="cheese_pizza2" type="Sprite" parent="Content/Pizza/Pizza2"]
+[node name="cheese_pizza2" type="Sprite" parent="Content/PizzaBox/Pizza2"]
 position = Vector2( -256.193, 108.184 )
 texture = ExtResource( 8 )
 
-[node name="Pizza3" parent="Content/Pizza" instance=ExtResource( 6 )]
+[node name="Pizza3" parent="Content/PizzaBox" instance=ExtResource( 6 )]
 editor/display_folded = true
-position = Vector2( 234.935, 614.595 )
+position = Vector2( 74.283, 13.1543 )
 
-[node name="cheese_pizza3" type="Sprite" parent="Content/Pizza/Pizza3"]
+[node name="cheese_pizza3" type="Sprite" parent="Content/PizzaBox/Pizza3"]
 position = Vector2( -272.036, -78.2795 )
 texture = ExtResource( 9 )
 
-[node name="Pizza4" parent="Content/Pizza" instance=ExtResource( 6 )]
+[node name="Pizza4" parent="Content/PizzaBox" instance=ExtResource( 6 )]
 editor/display_folded = true
-position = Vector2( 205.031, 645.76 )
+position = Vector2( 33.2725, 43.3318 )
 
-[node name="cheese_pizza4" type="Sprite" parent="Content/Pizza/Pizza4"]
+[node name="cheese_pizza4" type="Sprite" parent="Content/PizzaBox/Pizza4"]
 position = Vector2( -124.268, -208.085 )
 texture = ExtResource( 10 )
 
-[node name="Pizza5" parent="Content/Pizza" instance=ExtResource( 6 )]
+[node name="Pizza5" parent="Content/PizzaBox" instance=ExtResource( 6 )]
 editor/display_folded = true
-position = Vector2( 160.608, 648.704 )
+position = Vector2( -21.666, 41.7842 )
 
-[node name="cheese_pizza5" type="Sprite" parent="Content/Pizza/Pizza5"]
+[node name="cheese_pizza5" type="Sprite" parent="Content/PizzaBox/Pizza5"]
 position = Vector2( 78.9045, -220.774 )
 texture = ExtResource( 11 )
 
-[node name="Pizza6" parent="Content/Pizza" instance=ExtResource( 6 )]
+[node name="Pizza6" parent="Content/PizzaBox" instance=ExtResource( 6 )]
 editor/display_folded = true
-position = Vector2( 129.888, 621.619 )
+position = Vector2( -62.6763, 13.1543 )
 
-[node name="cheese_pizza6" type="Sprite" parent="Content/Pizza/Pizza6"]
+[node name="cheese_pizza6" type="Sprite" parent="Content/PizzaBox/Pizza6"]
 position = Vector2( 209.336, -91.2314 )
 texture = ExtResource( 12 )
 
-[node name="Pizza7" parent="Content/Pizza" instance=ExtResource( 6 )]
+[node name="Pizza7" parent="Content/PizzaBox" instance=ExtResource( 6 )]
 editor/display_folded = true
-position = Vector2( 130.58, 576.95 )
+position = Vector2( -68.0928, -36.3677 )
 
-[node name="cheese_pizza7" type="Sprite" parent="Content/Pizza/Pizza7"]
+[node name="cheese_pizza7" type="Sprite" parent="Content/PizzaBox/Pizza7"]
 position = Vector2( 203.293, 115.577 )
 texture = ExtResource( 13 )
 
-[node name="Pizza8" parent="Content/Pizza" instance=ExtResource( 6 )]
+[node name="Pizza8" parent="Content/PizzaBox" instance=ExtResource( 6 )]
 editor/display_folded = true
-position = Vector2( 158.256, 546.576 )
+position = Vector2( -25.5349, -58.8074 )
 
-[node name="cheese_pizza8" type="Sprite" parent="Content/Pizza/Pizza8"]
+[node name="cheese_pizza8" type="Sprite" parent="Content/PizzaBox/Pizza8"]
 position = Vector2( 64.3373, 233.318 )
 texture = ExtResource( 14 )
 
@@ -133,15 +160,65 @@ position = Vector2( 695.669, 195.689 )
 
 [node name="Friend4" parent="Content" instance=ExtResource( 16 )]
 position = Vector2( 613.715, 106.412 )
+speak_range = 2
 
 [node name="Friend5" parent="Content" instance=ExtResource( 16 )]
 position = Vector2( 81.9636, 566.031 )
 
 [node name="Friend6" parent="Content" instance=ExtResource( 16 )]
 position = Vector2( 365.217, 507.186 )
+speak_range = 2
 
 [node name="Friend2" parent="Content" instance=ExtResource( 16 )]
 position = Vector2( 242.404, 80.0361 )
+speak_range = 3
+
+[node name="Friend7" parent="Content" instance=ExtResource( 16 )]
+position = Vector2( 432.38, 244.165 )
+speak_range = 3
+
+[node name="Path2D" type="Path2D" parent="Content"]
+position = Vector2( 162.278, 291.982 )
+scale = Vector2( 0.219, 0.219 )
+curve = SubResource( 2 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Content/Path2D"]
+position = Vector2( -79.5544, -136.264 )
+rotation = -1.33275
+scale = Vector2( 1, 1 )
+rotate = false
+
+[node name="Normal1" parent="Content/Path2D/PathFollow2D" instance=ExtResource( 16 )]
+position = Vector2( 4.93384, 2.36133 )
+rotation = 1.33275
+scale = Vector2( 1, 1 )
+coolness = 0
+
+[node name="Path2D2" type="Path2D" parent="Content"]
+position = Vector2( 162.278, 291.982 )
+scale = Vector2( 0.219, 0.219 )
+curve = SubResource( 3 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Content/Path2D2"]
+position = Vector2( 1217.42, 513.757 )
+rotation = -1.33275
+scale = Vector2( 1, 1 )
+rotate = false
+
+[node name="Normal4" parent="Content/Path2D2/PathFollow2D" instance=ExtResource( 16 )]
+rotation = 1.33275
+scale = Vector2( 1, 1 )
+speak_range = 3
+coolness = 0
+
+[node name="Normal3" parent="Content" instance=ExtResource( 16 )]
+position = Vector2( 568.077, 197.64 )
+coolness = 0
+
+[node name="Normal2" parent="Content" instance=ExtResource( 16 )]
+position = Vector2( 549.984, 682.274 )
+speak_range = 2
+coolness = 0
 
 [node name="ScoreBar" parent="." instance=ExtResource( 17 )]
-[connection signal="body_entered" from="Content/Pizza/PizzaBox" to="Content/Pizza/PizzaBox" method="on_body_enter"]
+[connection signal="body_entered" from="Content/PizzaBox" to="Content/PizzaBox" method="on_body_enter"]

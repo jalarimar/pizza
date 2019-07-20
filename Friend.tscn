@@ -4,7 +4,7 @@
 [ext_resource path="res://person_friend.png" type="Texture" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 62.1289
+radius = 25.5315
 
 [node name="Friend" type="KinematicBody2D" groups=[
 "people",
@@ -21,8 +21,4 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
-__meta__ = {
-"_edit_lock_": true
-}
-
 [connection signal="mouse_entered" from="." to="." method="_on_Friend_mouse_entered"]
