@@ -15,6 +15,6 @@ func _physics_process(delta):
     move_and_slide(movement)
 
 func _input(event):
-	if event.is_action_pressed("space"):
-		emit_signal("speak_pizza", position, speak_range)
+    if event.is_action_pressed("space"):
+        emit_signal("speak_pizza", position, speak_range)
 
