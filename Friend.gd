@@ -1,7 +1,7 @@
 extends KinematicBody2D
 signal speak_pizza
 
-var speak_range = 3      # 1, 2, 3
+var speak_range = 1      # 1, 2, 3
 var is_chatty = false
 var hungryness = 1    # 1, 2, 3
 var coolness = 0      # -5, 1, 5, 20

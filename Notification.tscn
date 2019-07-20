@@ -15,3 +15,4 @@ texture = ExtResource( 2 )
 shape = SubResource( 1 )
 
 [node name="Tween" type="Tween" parent="."]
+[connection signal="body_entered" from="." to="." method="_on_Notification_body_entered"]
