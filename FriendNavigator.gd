@@ -1,11 +1,11 @@
 extends Navigation2D
 
-func _draw():
-    for friend in get_tree().get_nodes_in_group("friend"):
-        if friend.is_aware and friend.target:
-            var path = get_simple_path(friend.position, friend.target.position)
-            for i in range(path.size() - 1):
-                draw_line(path[i], path[i+1], Color.aliceblue, 5)
+#func _draw():
+#    for friend in get_tree().get_nodes_in_group("friend"):
+#        if friend.is_aware and friend.target:
+#            var path = get_simple_path(friend.position, friend.target.position)
+#            for i in range(path.size() - 1):
+#                draw_line(path[i], path[i+1], Color.aliceblue, 5)
 
 func _process(delta):
     var pizza_box = get_tree().get_nodes_in_group("pizza_box")[0]
@@ -36,4 +36,4 @@ func _process(delta):
         var path = get_simple_path(friend.position, target.position)
         if path.size() > 1:
             friend.direction = (path[1] - friend.position).normalized()
-    update()
+#    update()

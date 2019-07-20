@@ -2,31 +2,31 @@
 
 [ext_resource path="res://level1.png" type="Texture" id=1]
 [ext_resource path="res://NotificationController.tscn" type="PackedScene" id=2]
-[ext_resource path="res://PizzaBox.gd" type="Script" id=3]
-[ext_resource path="res://person_normal.png" type="Texture" id=4]
-[ext_resource path="res://Pizza.tscn" type="PackedScene" id=5]
-[ext_resource path="res://cheese_pizza1.png" type="Texture" id=6]
-[ext_resource path="res://cheese_pizza2.png" type="Texture" id=7]
-[ext_resource path="res://cheese_pizza3.png" type="Texture" id=8]
-[ext_resource path="res://cheese_pizza4.png" type="Texture" id=9]
-[ext_resource path="res://cheese_pizza5.png" type="Texture" id=10]
-[ext_resource path="res://cheese_pizza6.png" type="Texture" id=11]
-[ext_resource path="res://cheese_pizza7.png" type="Texture" id=12]
-[ext_resource path="res://cheese_pizza8.png" type="Texture" id=13]
-[ext_resource path="res://Player.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Friend.tscn" type="PackedScene" id=15]
-[ext_resource path="res://FriendNavigator.gd" type="Script" id=16]
+[ext_resource path="res://FriendNavigator.gd" type="Script" id=3]
+[ext_resource path="res://PizzaBox.gd" type="Script" id=4]
+[ext_resource path="res://person_normal.png" type="Texture" id=5]
+[ext_resource path="res://Pizza.tscn" type="PackedScene" id=6]
+[ext_resource path="res://cheese_pizza1.png" type="Texture" id=7]
+[ext_resource path="res://cheese_pizza2.png" type="Texture" id=8]
+[ext_resource path="res://cheese_pizza3.png" type="Texture" id=9]
+[ext_resource path="res://cheese_pizza4.png" type="Texture" id=10]
+[ext_resource path="res://cheese_pizza5.png" type="Texture" id=11]
+[ext_resource path="res://cheese_pizza6.png" type="Texture" id=12]
+[ext_resource path="res://cheese_pizza7.png" type="Texture" id=13]
+[ext_resource path="res://cheese_pizza8.png" type="Texture" id=14]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Friend.tscn" type="PackedScene" id=16]
+
+[sub_resource type="NavigationPolygon" id=1]
+vertices = PoolVector2Array( 264, 27, 261, 264, 167, 242, 16, 29, 590, 778, 19, 776, 15, 274, 137, 294, 604, 703, 136, 239, 19, 253, 166, 295, 494, 576, 283, 24, 786, 23, 793, 773, 621, 597, 635, 783, 554, 541, 540, 525, 515, 586, 595, 615, 264, 289, 281, 274 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 5, 6, 7, 8 ), PoolIntArray( 9, 10, 3 ), PoolIntArray( 9, 3, 2 ), PoolIntArray( 7, 9, 2, 11 ), PoolIntArray( 8, 7, 11, 12 ), PoolIntArray( 13, 14, 15, 16 ), PoolIntArray( 15, 17, 16 ), PoolIntArray( 13, 16, 18, 19 ), PoolIntArray( 20, 21, 8 ), PoolIntArray( 11, 22, 12 ), PoolIntArray( 20, 8, 12 ), PoolIntArray( 20, 12, 19, 18 ), PoolIntArray( 13, 19, 23 ) ]
+outlines = [ PoolVector2Array( 16, 29, 264, 27, 261, 264, 167, 242, 166, 295, 264, 289, 494, 576, 540, 525, 281, 274, 283, 24, 786, 23, 793, 773, 635, 783, 621, 597, 554, 541, 515, 586, 595, 615, 604, 703, 590, 778, 19, 776, 15, 274, 137, 294, 136, 239, 19, 253 ) ]
 
 [sub_resource type="CircleShape2D" id=2]
 radius = 77.214
 
 [sub_resource type="CircleShape2D" id=3]
 radius = 98.2222
-
-[sub_resource type="NavigationPolygon" id=1]
-vertices = PoolVector2Array( 264, 27, 261, 264, 167, 242, 16, 29, 590, 778, 19, 776, 15, 274, 137, 294, 604, 703, 136, 239, 19, 253, 166, 295, 494, 576, 283, 24, 786, 23, 793, 773, 621, 597, 635, 783, 554, 541, 540, 525, 515, 586, 595, 615, 264, 289, 281, 274 )
-polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 5, 6, 7, 8 ), PoolIntArray( 9, 10, 3 ), PoolIntArray( 9, 3, 2 ), PoolIntArray( 7, 9, 2, 11 ), PoolIntArray( 8, 7, 11, 12 ), PoolIntArray( 13, 14, 15, 16 ), PoolIntArray( 15, 17, 16 ), PoolIntArray( 13, 16, 18, 19 ), PoolIntArray( 20, 21, 8 ), PoolIntArray( 11, 22, 12 ), PoolIntArray( 20, 8, 12 ), PoolIntArray( 20, 12, 19, 18 ), PoolIntArray( 13, 19, 23 ) ]
-outlines = [ PoolVector2Array( 16, 29, 264, 27, 261, 264, 167, 242, 166, 295, 264, 289, 494, 576, 540, 525, 281, 274, 283, 24, 786, 23, 793, 773, 635, 783, 621, 597, 554, 541, 515, 586, 595, 615, 604, 703, 590, 778, 19, 776, 15, 274, 137, 294, 136, 239, 19, 253 ) ]
 
 [node name="Level 1" type="Node2D"]
 
@@ -36,6 +36,12 @@ scale = Vector2( 0.347749, 0.355566 )
 texture = ExtResource( 1 )
 
 [node name="NotificationController" parent="." instance=ExtResource( 2 )]
+
+[node name="NavigationController" type="Navigation2D" parent="."]
+script = ExtResource( 3 )
+
+[node name="NavigationPolygonInstance2" type="NavigationPolygonInstance" parent="NavigationController"]
+navpoly = SubResource( 1 )
 
 [node name="Walls2" type="StaticBody2D" parent="."]
 
@@ -48,7 +54,7 @@ polygon = PoolVector2Array( 265.797, 21.4163, 262.121, 266.937, 195.228, 263.261
 "pizza_box",
 ]]
 position = Vector2( 181.204, 601.335 )
-script = ExtResource( 3 )
+script = ExtResource( 4 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Pizza/PizzaBox"]
 
@@ -62,97 +68,91 @@ shape = SubResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="Pizza/PizzaBox"]
 scale = Vector2( 0.767777, 0.767777 )
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
-[node name="Pizza" parent="Pizza" instance=ExtResource( 5 )]
+[node name="Pizza" parent="Pizza" instance=ExtResource( 6 )]
 editor/display_folded = true
 position = Vector2( 195.878, 547.192 )
 
 [node name="cheese_pizza1" type="Sprite" parent="Pizza/Pizza"]
 position = Vector2( -89.3305, 223.904 )
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 
-[node name="Pizza2" parent="Pizza" instance=ExtResource( 5 )]
+[node name="Pizza2" parent="Pizza" instance=ExtResource( 6 )]
 editor/display_folded = true
 position = Vector2( 232.262, 572.693 )
 
 [node name="cheese_pizza2" type="Sprite" parent="Pizza/Pizza2"]
 position = Vector2( -256.193, 108.184 )
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 
-[node name="Pizza3" parent="Pizza" instance=ExtResource( 5 )]
+[node name="Pizza3" parent="Pizza" instance=ExtResource( 6 )]
 editor/display_folded = true
 position = Vector2( 234.935, 614.595 )
 
 [node name="cheese_pizza3" type="Sprite" parent="Pizza/Pizza3"]
 position = Vector2( -272.036, -78.2795 )
-texture = ExtResource( 8 )
+texture = ExtResource( 9 )
 
-[node name="Pizza4" parent="Pizza" instance=ExtResource( 5 )]
+[node name="Pizza4" parent="Pizza" instance=ExtResource( 6 )]
 editor/display_folded = true
 position = Vector2( 205.031, 645.76 )
 
 [node name="cheese_pizza4" type="Sprite" parent="Pizza/Pizza4"]
 position = Vector2( -124.268, -208.085 )
-texture = ExtResource( 9 )
+texture = ExtResource( 10 )
 
-[node name="Pizza5" parent="Pizza" instance=ExtResource( 5 )]
+[node name="Pizza5" parent="Pizza" instance=ExtResource( 6 )]
 editor/display_folded = true
 position = Vector2( 160.608, 648.704 )
 
 [node name="cheese_pizza5" type="Sprite" parent="Pizza/Pizza5"]
 position = Vector2( 78.9045, -220.774 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
-[node name="Pizza6" parent="Pizza" instance=ExtResource( 5 )]
+[node name="Pizza6" parent="Pizza" instance=ExtResource( 6 )]
 editor/display_folded = true
 position = Vector2( 129.888, 621.619 )
 
 [node name="cheese_pizza6" type="Sprite" parent="Pizza/Pizza6"]
 position = Vector2( 209.336, -91.2314 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
-[node name="Pizza7" parent="Pizza" instance=ExtResource( 5 )]
+[node name="Pizza7" parent="Pizza" instance=ExtResource( 6 )]
 editor/display_folded = true
 position = Vector2( 130.58, 576.95 )
 
 [node name="cheese_pizza7" type="Sprite" parent="Pizza/Pizza7"]
 position = Vector2( 203.293, 115.577 )
-texture = ExtResource( 12 )
+texture = ExtResource( 13 )
 
-[node name="Pizza8" parent="Pizza" instance=ExtResource( 5 )]
+[node name="Pizza8" parent="Pizza" instance=ExtResource( 6 )]
 editor/display_folded = true
 position = Vector2( 158.256, 546.576 )
 
 [node name="cheese_pizza8" type="Sprite" parent="Pizza/Pizza8"]
 position = Vector2( 64.3373, 233.318 )
-texture = ExtResource( 13 )
+texture = ExtResource( 14 )
 
-[node name="Player" parent="." instance=ExtResource( 14 )]
+[node name="Player" parent="." instance=ExtResource( 15 )]
 position = Vector2( 628.84, 372.156 )
 
-[node name="Friend" parent="." instance=ExtResource( 15 )]
+[node name="Friend" parent="." instance=ExtResource( 16 )]
 position = Vector2( 449.352, 179.25 )
 
-[node name="Friend3" parent="." instance=ExtResource( 15 )]
+[node name="Friend3" parent="." instance=ExtResource( 16 )]
 position = Vector2( 498.827, 257.794 )
 
-[node name="Friend4" parent="." instance=ExtResource( 15 )]
+[node name="Friend4" parent="." instance=ExtResource( 16 )]
 position = Vector2( 545.294, 345.359 )
 
-[node name="Friend5" parent="." instance=ExtResource( 15 )]
+[node name="Friend5" parent="." instance=ExtResource( 16 )]
 position = Vector2( 377.753, 184.978 )
 
-[node name="Friend6" parent="." instance=ExtResource( 15 )]
+[node name="Friend6" parent="." instance=ExtResource( 16 )]
 position = Vector2( 417.849, 101.923 )
 
-[node name="Friend2" parent="." instance=ExtResource( 15 )]
+[node name="Friend2" parent="." instance=ExtResource( 16 )]
 position = Vector2( 149.772, 143.194 )
-
-[node name="NavigationController" type="Navigation2D" parent="."]
-script = ExtResource( 16 )
-
-[node name="NavigationPolygonInstance2" type="NavigationPolygonInstance" parent="NavigationController"]
-navpoly = SubResource( 1 )
 
 [connection signal="body_entered" from="Pizza/PizzaBox" to="Pizza/PizzaBox" method="on_body_enter"]
