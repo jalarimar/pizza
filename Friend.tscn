@@ -24,4 +24,6 @@ shape = SubResource( 1 )
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.0
+
+[node name="Timer2" type="Timer" parent="."]
 [connection signal="mouse_entered" from="." to="." method="_on_Friend_mouse_entered"]

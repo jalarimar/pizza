@@ -28,7 +28,8 @@ func _ready():
         $Label.text = pizza_phrases[randi() % len(pizza_phrases)]
     elif type == "fact":
         $Label.text = normal_phrases[randi() % len(normal_phrases)]
-    
+        
+
     $Timer.start()
     yield($Timer, "timeout")
     queue_free()

@@ -43,10 +43,9 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 1226.89, 521.264, 0, 0, 0, 0, 1001.99, 989.059, 0, 0, 0, 0, 1118.27, 75.0056, 0, 0, 0, 0, 1094.24, -559.457, 0, 0, 0, 0, 1647.77, -440.563, 0, 0, 0, 0, 1823.69, 122.824, 0, 0, 0, 0, 1220.83, 515.205 )
 }
 
-[node name="Level 2" type="Node2D"]
+[node name="Level 4" type="Node2D"]
 
 [node name="Content" type="Node2D" parent="."]
-editor/display_folded = true
 position = Vector2( -0.336614, 102.044 )
 
 [node name="background" type="Sprite" parent="Content"]
@@ -172,6 +171,7 @@ speak_range = 2
 [node name="Friend6" parent="Content" instance=ExtResource( 16 )]
 position = Vector2( 365.217, 507.186 )
 speak_range = 2
+is_chatty = true
 
 [node name="Friend2" parent="Content" instance=ExtResource( 16 )]
 position = Vector2( 265.21, 626.57 )
@@ -180,6 +180,7 @@ speak_range = 2
 [node name="Friend7" parent="Content" instance=ExtResource( 16 )]
 position = Vector2( 432.38, 244.165 )
 speak_range = 3
+is_chatty = true
 
 [node name="Path2D - move this one" type="Path2D" parent="Content"]
 position = Vector2( 545.096, 406.013 )
@@ -248,5 +249,4 @@ coolness = 0
 
 [node name="ScoreBar" parent="." instance=ExtResource( 17 )]
 next_level = "res://main_menu/MainMenu.tscn"
-
 [connection signal="body_entered" from="Content/PizzaBox - move this one" to="Content/PizzaBox - move this one" method="on_body_enter"]

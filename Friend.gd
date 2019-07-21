@@ -28,6 +28,11 @@ func _ready():
     
     if coolness == 0:
         $Sprite.modulate = Color("#f690ff")
+        
+    if speak_range == 2:
+        speak_range = 1.5
+    elif speak_range == 3:
+        speak_range = 2
     
     if is_chatty:
         timer_loop()
@@ -39,7 +44,11 @@ func _process(delta):
         get_parent().set_offset(get_parent().get_offset() + 500 * delta)
 
 func timer_loop():
+    $Timer2.wait_time = randf() * 2
+    $Timer2.start()
+    yield($Timer2, "timeout")
     while true:
+        $Timer.wait_time = randf() * 1 + 2
         $Timer.start()
         yield($Timer, "timeout")
         if is_aware:
