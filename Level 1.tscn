@@ -155,4 +155,6 @@ position = Vector2( 417.849, 101.923 )
 position = Vector2( 149.772, 143.194 )
 
 [node name="ScoreBar" parent="." instance=ExtResource( 17 )]
+next_level = "res://Level 2.tscn"
+
 [connection signal="body_entered" from="Content/Pizza/PizzaBox" to="Content/Pizza/PizzaBox" method="on_body_enter"]

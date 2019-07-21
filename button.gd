@@ -1,6 +1,6 @@
 extends Button
 
-export(PackedScene) var level
+export(String) var level
 
 func _pressed():
-    get_tree().change_scene_to(level)
+    get_tree().change_scene(level)

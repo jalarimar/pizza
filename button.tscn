@@ -4,7 +4,7 @@
 [ext_resource path="res://main_menu/button.png" type="Texture" id=2]
 [ext_resource path="res://button.gd" type="Script" id=3]
 
-[sub_resource type="StyleBoxTexture" id=6]
+[sub_resource type="StyleBoxTexture" id=1]
 texture = ExtResource( 1 )
 region_rect = Rect2( 0, 0, 160, 157 )
 
@@ -18,7 +18,7 @@ region_rect = Rect2( 0, 0, 160, 157 )
 
 [node name="button" type="Button"]
 mouse_default_cursor_shape = 2
-custom_styles/hover = SubResource( 6 )
+custom_styles/hover = SubResource( 1 )
 custom_styles/pressed = SubResource( 2 )
 custom_styles/focus = SubResource( 3 )
 custom_styles/disabled = SubResource( 4 )

@@ -194,7 +194,6 @@ curve = SubResource( 2 )
 [node name="PathFollow2D" type="PathFollow2D" parent="Content/Path2D"]
 position = Vector2( -79.5544, -136.264 )
 rotation = -1.33275
-scale = Vector2( 1, 1 )
 rotate = false
 
 [node name="Normal1" parent="Content/Path2D/PathFollow2D" instance=ExtResource( 16 )]
@@ -211,7 +210,6 @@ curve = SubResource( 3 )
 [node name="PathFollow2D" type="PathFollow2D" parent="Content/Path2D2"]
 position = Vector2( 1217.42, 513.757 )
 rotation = -1.33275
-scale = Vector2( 1, 1 )
 rotate = false
 
 [node name="Normal4" parent="Content/Path2D2/PathFollow2D" instance=ExtResource( 16 )]
@@ -226,9 +224,8 @@ scale = Vector2( 0.219, 0.219 )
 curve = SubResource( 4 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Content/Path2D3"]
-position = Vector2( 1217.42, 513.757 )
+position = Vector2( 1226.89, 521.264 )
 rotation = -1.33275
-scale = Vector2( 1, 1 )
 rotate = false
 
 [node name="Normal4" parent="Content/Path2D3/PathFollow2D" instance=ExtResource( 16 )]
@@ -244,7 +241,6 @@ curve = SubResource( 5 )
 [node name="PathFollow2D" type="PathFollow2D" parent="Content/Path2D4"]
 position = Vector2( 1226.89, 521.264 )
 rotation = -1.33275
-scale = Vector2( 1, 1 )
 rotate = false
 
 [node name="Friend5" parent="Content/Path2D4/PathFollow2D" instance=ExtResource( 16 )]
@@ -256,4 +252,6 @@ position = Vector2( 568.077, 197.64 )
 coolness = 0
 
 [node name="ScoreBar" parent="." instance=ExtResource( 17 )]
+next_level = "res://main_menu/MainMenu.tscn"
+
 [connection signal="body_entered" from="Content/PizzaBox" to="Content/PizzaBox" method="on_body_enter"]
