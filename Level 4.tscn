@@ -18,27 +18,27 @@
 [ext_resource path="res://Friend.tscn" type="PackedScene" id=16]
 [ext_resource path="res://ScoreBar.tscn" type="PackedScene" id=17]
 
-[sub_resource type="NavigationPolygon" id=5]
+[sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( 293.243, 382.144, 12.8058, 766.239, 11.8449, 18.3525, 477.96, 16.8125, 788.511, 777.895, 28.4002, 781.219, 323.251, 395.862, 786.644, 21.1482, 458.453, 191.862, 488.74, 173.895, 492.333, 16.8125, 477.96, 171.328, 468.719, 201.102 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 5, 6, 7 ), PoolIntArray( 6, 0, 3, 8 ), PoolIntArray( 9, 10, 7 ), PoolIntArray( 3, 11, 8 ), PoolIntArray( 6, 8, 12 ), PoolIntArray( 7, 6, 12 ), PoolIntArray( 7, 12, 9 ) ]
 outlines = [ PoolVector2Array( 11.8449, 18.3525, 477.96, 16.8125, 477.96, 171.328, 458.453, 191.862, 468.719, 201.102, 488.74, 173.895, 492.333, 16.8125, 786.644, 21.1482, 788.511, 777.895, 28.4002, 781.219, 323.251, 395.862, 293.243, 382.144, 12.8058, 766.239 ) ]
 
-[sub_resource type="Curve2D" id=1]
+[sub_resource type="Curve2D" id=2]
 _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -79.5544, -136.264, 0, 0, 0, 0, -63.1461, 421.614, 0, 0, 0, 0, 886.185, 203.62, 0, 0, 0, 0, 815.864, -776.184, 0, 0, 0, 0, -93.6185, -719.927, 0, 0, 0, 0, -77.2102, -143.297 )
 }
 
-[sub_resource type="Curve2D" id=2]
+[sub_resource type="Curve2D" id=3]
 _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 1217.42, 513.757, 0, 0, 0, 0, 1928.51, 172.561, 0, 0, 0, 0, 2393.52, -843.464, 0, 0, 0, 0, 936.263, 290.772, 0, 0, 0, 0, 847.458, 2008.19, 0, 0, 0, 0, 1214.23, 516.946 )
 }
 
-[sub_resource type="Curve2D" id=3]
+[sub_resource type="Curve2D" id=4]
 _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 1226.89, 521.264, 0, 0, 0, 0, 1378.35, 999.896, 0, 0, 0, 0, 173.279, 1133.59, 0, 0, 0, 0, -621.483, 611.54, 0, 0, 0, 0, 1230.36, -323.474, 0, 0, 0, 0, 1251.14, 144.033, 0, 0, 0, 0, 1220.83, 515.205 )
 }
 
-[sub_resource type="Curve2D" id=4]
+[sub_resource type="Curve2D" id=5]
 _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 1226.89, 521.264, 0, 0, 0, 0, 1001.99, 989.059, 0, 0, 0, 0, 1118.27, 75.0056, 0, 0, 0, 0, 1094.24, -559.457, 0, 0, 0, 0, 1647.77, -440.563, 0, 0, 0, 0, 1823.69, 122.824, 0, 0, 0, 0, 1220.83, 515.205 )
 }
@@ -46,6 +46,7 @@ _data = {
 [node name="Level 2" type="Node2D"]
 
 [node name="Content" type="Node2D" parent="."]
+editor/display_folded = true
 position = Vector2( -0.336614, 102.044 )
 
 [node name="background" type="Sprite" parent="Content"]
@@ -59,7 +60,7 @@ texture = ExtResource( 1 )
 script = ExtResource( 3 )
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Content/NavigationController"]
-navpoly = SubResource( 5 )
+navpoly = SubResource( 1 )
 
 [node name="Walls2" type="StaticBody2D" parent="Content"]
 
@@ -183,7 +184,7 @@ speak_range = 3
 [node name="Path2D - move this one" type="Path2D" parent="Content"]
 position = Vector2( 545.096, 406.013 )
 scale = Vector2( 0.219, 0.219 )
-curve = SubResource( 1 )
+curve = SubResource( 2 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Content/Path2D - move this one"]
 position = Vector2( -79.5544, -136.264 )
@@ -199,7 +200,7 @@ coolness = 0
 [node name="Path2D2" type="Path2D" parent="Content"]
 position = Vector2( 162.278, 291.982 )
 scale = Vector2( 0.219, 0.219 )
-curve = SubResource( 2 )
+curve = SubResource( 3 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Content/Path2D2"]
 position = Vector2( 1217.42, 513.757 )
@@ -215,7 +216,7 @@ coolness = 0
 [node name="Path2D3" type="Path2D" parent="Content"]
 position = Vector2( 305.751, 508.372 )
 scale = Vector2( 0.219, 0.219 )
-curve = SubResource( 3 )
+curve = SubResource( 4 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Content/Path2D3"]
 position = Vector2( 1226.89, 521.264 )
@@ -230,7 +231,7 @@ coolness = 0
 [node name="Path2D4" type="Path2D" parent="Content"]
 position = Vector2( -186.249, 452.372 )
 scale = Vector2( 0.219, 0.219 )
-curve = SubResource( 4 )
+curve = SubResource( 5 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Content/Path2D4"]
 position = Vector2( 1226.89, 521.264 )
@@ -246,4 +247,6 @@ position = Vector2( 568.077, 197.64 )
 coolness = 0
 
 [node name="ScoreBar" parent="." instance=ExtResource( 17 )]
+next_level = "res://main_menu/MainMenu.tscn"
+
 [connection signal="body_entered" from="Content/PizzaBox - move this one" to="Content/PizzaBox - move this one" method="on_body_enter"]

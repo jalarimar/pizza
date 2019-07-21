@@ -44,9 +44,9 @@ _data = {
 }
 
 [node name="Level 2" type="Node2D"]
-editor/display_folded = true
 
 [node name="Content" type="Node2D" parent="."]
+editor/display_folded = true
 position = Vector2( -0.336614, 102.044 )
 
 [node name="background" type="Sprite" parent="Content"]
@@ -253,4 +253,6 @@ position = Vector2( 568.077, 197.64 )
 coolness = 0
 
 [node name="ScoreBar" parent="." instance=ExtResource( 17 )]
+next_level = "res://Level 3.tscn"
+
 [connection signal="body_entered" from="Content/PizzaBox" to="Content/PizzaBox" method="on_body_enter"]
