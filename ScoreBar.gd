@@ -20,3 +20,5 @@ func _physics_process(delta):
 
 func add_to_score(coolness):
 	currentScore += coolness
+	if currentScore >= nFriends:
+		get_tree().change_scene_to(load("res://Level 2.tscn"))

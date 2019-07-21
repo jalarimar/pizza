@@ -43,9 +43,12 @@ func on_reach_pizza():
         target.be_eaten(global_position)
         yield(target, "eaten")
         full = true
+        if coolness == 1:
+            $Sprite.modulate = Color("#00ccff")
+        else:
+            $Sprite.modulate = Color("#ee55ff")
         target = null
         emit_signal("eat", coolness)
-
 
 func make_comments():
     if is_aware:

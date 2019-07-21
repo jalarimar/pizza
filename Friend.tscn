@@ -4,7 +4,7 @@
 [ext_resource path="res://person_friend.png" type="Texture" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 25.5315
+radius = 35.3703
 
 [node name="Friend" type="KinematicBody2D" groups=[
 "people",
