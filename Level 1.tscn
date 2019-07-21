@@ -138,6 +138,7 @@ position = Vector2( 628.84, 372.156 )
 
 [node name="Friend" parent="Content" instance=ExtResource( 16 )]
 position = Vector2( 449.352, 179.25 )
+is_chatty = true
 
 [node name="Friend3" parent="Content" instance=ExtResource( 16 )]
 position = Vector2( 498.827, 257.794 )

@@ -1,10 +1,11 @@
 extends KinematicBody2D
 signal speak_pizza
 signal eat
+signal chat
 
 # stats
 export var speak_range = 1      # 1, 2, 3
-var is_chatty = false
+export var is_chatty = false
 var hungryness = 1    # 1, 2, 3
 export var coolness = 1   # todo figure out scoring when adding cooler people   # -5, 1, 5, 20
 var is_aware = false
@@ -28,16 +29,28 @@ func _ready():
     if coolness == 0:
         $Sprite.modulate = Color("#f690ff")
     
+    if is_chatty:
+        timer_loop()
+    
 func _process(delta):
     if is_aware and not full:
         move_and_slide(direction * speed)
     if not is_aware and get_parent() is PathFollow2D:
         get_parent().set_offset(get_parent().get_offset() + 500 * delta)
 
+func timer_loop():
+    while true:
+        $Timer.start()
+        yield($Timer, "timeout")
+        if is_aware:
+            emit_signal("speak_pizza", global_position, speak_range, "pizzafact")
+        else:
+            emit_signal("chat", global_position, "fact")
+
 func on_reach_pizza():
     if not is_aware:
         is_aware = true
-        emit_signal("speak_pizza", position, speak_range)
+        emit_signal("speak_pizza", global_position, speak_range, "pizza")
     
     if target and target.is_in_group("pizza_slices"):
         target.be_eaten(global_position)
@@ -68,4 +81,4 @@ func _on_Friend_mouse_entered():
 func hear_pizza():
     if not is_aware:
         is_aware = true
-        emit_signal("speak_pizza", global_position, speak_range)
+        emit_signal("speak_pizza", global_position, speak_range, "pizza")

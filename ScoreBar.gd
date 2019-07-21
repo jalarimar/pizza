@@ -23,4 +23,6 @@ func _physics_process(delta):
 func add_to_score(coolness):
     currentScore += coolness
     if currentScore >= nFriends:
+        $Timer.start()
+        yield($Timer, "timeout")
         get_tree().change_scene(next_level)
