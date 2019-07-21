@@ -253,6 +253,4 @@ position = Vector2( 568.077, 197.64 )
 coolness = 0
 
 [node name="ScoreBar" parent="." instance=ExtResource( 17 )]
-next_level = "res://main_menu/MainMenu.tscn"
-
 [connection signal="body_entered" from="Content/PizzaBox" to="Content/PizzaBox" method="on_body_enter"]

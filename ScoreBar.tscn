@@ -26,10 +26,10 @@ region_rect = Rect2( 0, 0, 160, 157 )
 script = ExtResource( 1 )
 
 [node name="GreenBarStart" type="Position2D" parent="."]
-position = Vector2( 60.9254, 55.134 )
+position = Vector2( 93.782, 59.5684 )
 
 [node name="GreenBarEnd" type="Position2D" parent="."]
-position = Vector2( 578.254, 60.7881 )
+position = Vector2( 631.991, 62.7784 )
 
 [node name="GreenBarTip" type="Position2D" parent="."]
 position = Vector2( -6.94397, 49.1206 )
@@ -88,4 +88,3 @@ level = "res://main_menu/MainMenu.tscn"
 [node name="back" type="Sprite" parent="button2"]
 position = Vector2( 83.4917, 87.1288 )
 texture = ExtResource( 9 )
-

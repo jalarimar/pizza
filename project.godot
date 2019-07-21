@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Did I Hear Pizza"
-run/main_scene="res://main_menu/MainMenu.tscn"
+run/main_scene="res://Level 1.tscn"
 config/icon="res://icon.png"
 
 [display]

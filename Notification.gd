@@ -13,6 +13,7 @@ func _ready():
     $Tween.interpolate_property(self, "circle_radius", 10, speak_range * radius_base * modifier, 0.5, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
     $Tween.start()
     yield($Tween, "tween_completed")
+    
     queue_free()
 
 func _physics_process(delta):

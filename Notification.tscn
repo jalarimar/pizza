@@ -1,23 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Notification.gd" type="Script" id=1]
 [ext_resource path="res://soundwave.png" type="Texture" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
 resource_local_to_scene = true
-
-[sub_resource type="StyleBoxFlat" id=2]
-bg_color = Color( 1, 0.996078, 0.937255, 1 )
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color( 0, 0, 0, 1 )
-corner_radius_top_left = 2
-corner_radius_top_right = 2
-corner_radius_bottom_right = 2
-corner_radius_bottom_left = 2
-corner_detail = 4
 
 [node name="Notification" type="Area2D"]
 script = ExtResource( 1 )
@@ -30,21 +17,3 @@ texture = ExtResource( 2 )
 shape = SubResource( 1 )
 
 [node name="Tween" type="Tween" parent="."]
-
-[node name="PizzaSpeech" type="Control" parent="."]
-margin_left = -19.5339
-margin_top = -22.7467
-margin_right = 20.4661
-margin_bottom = 17.2533
-
-[node name="Label" type="Label" parent="PizzaSpeech"]
-margin_left = 0.771072
-margin_top = -1.67066
-margin_right = 43.7711
-margin_bottom = 16.3293
-rect_rotation = 6.90672
-custom_styles/normal = SubResource( 2 )
-custom_colors/font_color = Color( 0.67451, 0.192157, 0.192157, 1 )
-custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
-text = "Pizza!"
-

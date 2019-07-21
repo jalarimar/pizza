@@ -13,3 +13,6 @@ func create_notification(position, speak_range):
     notification.global_position = position
     notification.speak_range = speak_range
     add_child(notification) # add notification on same level as notification controller
+    
+    var speech = preload("res://Speech.tscn").instance()
+    speech.rect_position = position
