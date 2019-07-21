@@ -24,7 +24,7 @@ func _ready():
         $Sprite.texture = load("res://person_friend_loud.png")
     else:
         $Sprite.texture = load("res://person_friend.png")
-	
+    
     if coolness == 0:
         $Sprite.modulate = Color("#f690ff")
     
