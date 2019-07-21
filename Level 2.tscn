@@ -44,6 +44,7 @@ _data = {
 }
 
 [node name="Level 2" type="Node2D"]
+editor/display_folded = true
 
 [node name="Content" type="Node2D" parent="."]
 position = Vector2( -0.336614, 102.044 )
@@ -194,7 +195,6 @@ curve = SubResource( 2 )
 [node name="PathFollow2D" type="PathFollow2D" parent="Content/Path2D"]
 position = Vector2( -79.5544, -136.264 )
 rotation = -1.33275
-scale = Vector2( 1, 1 )
 rotate = false
 
 [node name="Normal1" parent="Content/Path2D/PathFollow2D" instance=ExtResource( 16 )]
@@ -211,7 +211,6 @@ curve = SubResource( 3 )
 [node name="PathFollow2D" type="PathFollow2D" parent="Content/Path2D2"]
 position = Vector2( 1217.42, 513.757 )
 rotation = -1.33275
-scale = Vector2( 1, 1 )
 rotate = false
 
 [node name="Normal4" parent="Content/Path2D2/PathFollow2D" instance=ExtResource( 16 )]
@@ -226,9 +225,8 @@ scale = Vector2( 0.219, 0.219 )
 curve = SubResource( 4 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Content/Path2D3"]
-position = Vector2( 1217.42, 513.757 )
+position = Vector2( 1226.89, 521.264 )
 rotation = -1.33275
-scale = Vector2( 1, 1 )
 rotate = false
 
 [node name="Normal4" parent="Content/Path2D3/PathFollow2D" instance=ExtResource( 16 )]
@@ -244,7 +242,6 @@ curve = SubResource( 5 )
 [node name="PathFollow2D" type="PathFollow2D" parent="Content/Path2D4"]
 position = Vector2( 1226.89, 521.264 )
 rotation = -1.33275
-scale = Vector2( 1, 1 )
 rotate = false
 
 [node name="Friend5" parent="Content/Path2D4/PathFollow2D" instance=ExtResource( 16 )]
